@@ -10,6 +10,6 @@ The main folder contains four R scripts that are used throughout the paper:
 
 Additionally, the [Models](Models/) folder includes the four Stan models used and mentioned in the paper.
 
-he [Data](Data/) folder contains the necessary data to replicate the case study. The pitfall trapping dataset has been desensitized by excluding personal names, by adding a normally distributed jitter (sd = 5 km) to the exact trapping locations, by randomly discarding 90% of the trapping events, and by only considering the 50 most abundantly trapped species.
+he [Data](Data/) folder contains the necessary data to replicate the case study. The pitfall trapping dataset has been desensitized by excluding personal names, by adding a normally distributed jitter (sd = 5 km) to the exact trapping locations, by randomly discarding 90% of the trapping events that still lie within the study area after jittering, and by only considering the 50 most abundantly trapped species. These alterations do not affect the ability of interested users to use and to experiment with the code, and strongly reduce computational burden.
 
 The folders [Simulation](Simulation/), [Output](Output/) and [Plots](Plots/) are empty but get populated while running the R scripts.
