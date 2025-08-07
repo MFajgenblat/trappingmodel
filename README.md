@@ -6,7 +6,7 @@ The main folder contains four R scripts that are used throughout the paper:
 - [Script_A_simulation_study.R](Script_A_simulation_study.R) is needed to replicate the simulation study
 - [Script_B_data_preparation.R](Script_B_data_preparation.R) is needed to prepare the data for the case studies
 - [Script_C_varying_phenology.R](Script_C_varying_phenology.R) is needed to replicate the case study on inferring yearly phenological patterns and change thereof
-- [Script_D_JSDM.R](Script_D_JSDM.R) is needed to replicate the cases study on estimating a joint species distribution model (JSDM) accounting for temporal aggregation
+- [Script_D_JSDM.R](Script_D_JSDM.R) is needed to replicate the cases study on estimating a Joint Species Distribution Model (JSDM) accounting for temporal aggregation
 
 Additionally, the [Models](Models/) folder includes the four Stan models used and mentioned in the paper.
 
