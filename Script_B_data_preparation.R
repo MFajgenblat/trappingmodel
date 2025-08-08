@@ -144,7 +144,7 @@ xy <- limburg_grid %>%
   dplyr::select(X_rescaled, Y_rescaled) %>%
   as.matrix()
 
-N_spatial_bf_1D <- 15#15 # was 30 before 2/05/2025
+N_spatial_bf_1D <- 15
 spatial_bf_X <- bs(xy[,1], Boundary.knots = c(-1.2,1.2), knots = seq(-1.2, 1.2, length.out = N_spatial_bf_1D - 2))[,-c(N_spatial_bf_1D + 1)]
 spatial_bf_Y <- bs(xy[,2], Boundary.knots = c(-1.2,1.2), knots = seq(-1.2, 1.2, length.out = N_spatial_bf_1D - 2))[,-c(N_spatial_bf_1D + 1)]
 spatial_bf <- do.call(rbind, lapply(1:nrow(xy), function(i) kronecker(spatial_bf_X[i,], spatial_bf_Y[i,])))
@@ -215,3 +215,4 @@ datalist <- list(N_samples = nrow(Y),
                  midpoint = yday(data$Midpoint),
                  bf_range = seq(-1, 1, length.out = N_bf + 1)[1:N_bf])
 saveRDS(datalist, "Data/datalist_2025_07_17.rds")
+
